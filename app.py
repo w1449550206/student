@@ -25,10 +25,19 @@ class Student(db.Model):
     __tablename__ = 'student'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), unique=True)
+    name = db.Column(db.String(20), unique=True, index = True)
     gender = db.Column(db.String(10))
     chinese = db.Column(db.Float)
     math = db.Column(db.Float)
+
+class Article(db.Model):
+    __tablename__ = 'article'
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(30), index=True)
+    content = db.Column(db.Text)
+    created = db.Column(db.DateTime)
+
 
 
 @app.route('/')
