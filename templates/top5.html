@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Top 5</title>
+    </head>
+
+    <body>
+        <h2>排名前五的学生</h2>
+        <hr>
+        <ol>
+            {% for user in users %}
+            <li>{{ user.name }}, 总分：{{ user.chinese + user.math }}</li>
+            {% endfor %}
+        </ol>
+    </body>
+</html>

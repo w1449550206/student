@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>学生信息</title>
+    </head>
+
+    <body>
+        <h2>{{user.name}}</h2>
+        <hr>
+        <img src="{{ url_for('static', filename='upload/' + user.name) }}" width="200px">
+        <br>
+
+        性别：{{ '男' if user.gender == 'male' else '女' }}
+        <br>
+
+        语文：{{ user.chinese }}
+        <br>
+
+        数学：{{ user.math }}
+    </body>
+</html>
